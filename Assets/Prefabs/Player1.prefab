@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7631183802712465978}
   - component: {fileID: 3286595973325950497}
   - component: {fileID: 1233770561519928614}
+  - component: {fileID: 8971569393070236126}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -197,6 +198,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6ff9f92b0e0e143ad1884031650638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8971569393070236126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4827750884377802108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d357056670a92eb49ba7c6a240a44a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 4
+  _addedNetworkObject: {fileID: 5078056395715243477}
+  _networkObjectCache: {fileID: 5078056395715243477}
+  _text: {fileID: 6097592494945919737}
 --- !u!1 &7560687197651454638
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +310,7 @@ MonoBehaviour:
   - {fileID: 6742056517463496012}
   - {fileID: 4315186994058005071}
   - {fileID: 311777927138180014}
+  - {fileID: 8971569393070236126}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   _isNetworked: 1
@@ -425,7 +443,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6489672812460558880}
-  - component: {fileID: 4080156776211959022}
   - component: {fileID: 4931045067024334819}
   - component: {fileID: 6097592494945919737}
   m_Layer: 0
@@ -455,14 +472,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.57}
   m_SizeDelta: {x: 5, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4080156776211959022
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8055279802361055927}
-  m_CullTransparentMesh: 1
 --- !u!23 &4931045067024334819
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -552,8 +561,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

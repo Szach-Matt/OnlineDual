@@ -44,7 +44,7 @@ public class PlayerNameTracker : NetworkBehaviour
     }
 
     // <summary>
-    // Let's player set their name and sync it iwth others
+    // Called when a remot client connection state changes.
     // </summary>
     private void ServerManager_OnRemoteConnectionState(NetworkConnection arg1, RemoteConnectionStateArgs arg2)
     {
@@ -55,7 +55,7 @@ public class PlayerNameTracker : NetworkBehaviour
     }
 
     // <summary>
-    // Let's player set their name and sync it iwth others
+    // Optional callback when playerNames collection changes.
     // </summary>
     private void _playerNames_OnChange(SyncDictionaryOperation op, NetworkConnection key, string value, bool asServer)
     {
@@ -66,7 +66,7 @@ public class PlayerNameTracker : NetworkBehaviour
     }
 
     // <summary>
-    // Let's player set their name and sync it iwth others
+    // Gets a player name. Works on server or client.
     // </summary>
     public static string GetPlayerName(NetworkConnection conn)
     {
@@ -77,7 +77,7 @@ public class PlayerNameTracker : NetworkBehaviour
     }
 
     // <summary>
-    // Let's player set their name and sync it iwth others
+    // Let's clients set their name.
     // </summary>
     [Client]
     public static void SetName(string name)
@@ -85,11 +85,11 @@ public class PlayerNameTracker : NetworkBehaviour
         _instance.ServerSetName(name);
     }
 
-    // <summary>
-    // Let's player set their name and sync it iwth others
-    // </summary>
-    // <param name="name"></param>
-    // <param name="sender"></param>
+    /// <summary>
+    /// Set name on server
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="sender"></param>
     [ServerRpc(RequireOwnership = false)]
     private void ServerSetName(string name, NetworkConnection sender = null)
     {
